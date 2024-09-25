@@ -1,0 +1,47 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <link rel="stylesheet" href="TW.css" />
+    <script src="TW.js">
+    </script>
+    <script>
+       window.onload = ajouteNumCode;
+    </script>
+  </head>
+  <body>
+    <h1>Technologies web (Javascript)</h1>
+    <h2>Atelier 5, exercice 5, étape 5</h2>
+
+    <h3>Comment analyser la propriété "année" ?</h3>
+
+    <p>Il a plusieurs cas à considérer.</p>
+    <ol>
+      <li>L'objet devrait avoir une propriété "année", ce qu'on peut vérifier grâce à la condition <pre>année in obj</pre>.</li>
+      <li>En supposant que c'est le cas, il faut encore que ce soit bien un nombre. On peut tester le type de la valeur grâce à la condition <pre>typeof(obj.année) == "number"</pre></li>
+    </ol>
+
+    <p>Un premier bout de code possible est donc le suivant.</p>
+
+    <pre><code>
+... (année in obj && typeof(obj.année) == "number" ? `vu en IG${obj.année}` : "pas vu en IG") ...
+    </code></pre>
+
+    <p>On peut toutefois raccourcir le code en constatant que, si l'objet ne possède pas de propriété "année", Javascript évalue obj.année comme étant undefined, dont le type est "undefined". Dès lors, on peut se contenter du code suivant (qui est cependant moins clair que celui du dessus pour des lecteurs qui seraient moins familiers avec les particularités du Javascript)</p>
+
+    <pre><code>
+... (typeof(obj.année) == "number" ? `vu en IG${obj.année}` : "pas vu en IG") ...
+    </code></pre>
+
+    <p>Au final, on obtient le code suivant.</p>
+
+  	<pre><code>
+function afficheLangage (langage) {
+  let année = (typeof(langage.année) == "number" ? `vu en IG${langage.année}` : "pas vu en IG");
+  let oo = (langage.oo ? "" : "pas ") + "orienté objet";
+  console.log(`${langage.nom} (${année}) : ${oo}`);
+}
+    </code></pre>
+
+  </body>
+</html>

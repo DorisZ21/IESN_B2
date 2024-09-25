@@ -1,0 +1,43 @@
+body {
+	background-color: palegreen;
+}
+h1 {
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 12px;
+}
+h2 {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
+}
+
+pre {
+	border: 1px solid blue;
+	border-radius: 6px;
+	background-color: lemonchiffon;
+	padding: 6px;
+  font-size: 125%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+pre .num {
+	font-style: italic;
+	color: grey;
+	margin-right: 12px;
+}
+pre .pair, pre .impair {
+  display: block;
+}
+pre .pair:hover, pre .impair:hover {
+  font-weight: bold;
+  background-color: white;
+}
+pre .pair {
+  background-color: papayawhip;
+}
+pre .impair {
+
+}
