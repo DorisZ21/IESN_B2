@@ -1,0 +1,138 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .réussite, .échec { text-align: center; }
+      .réussite { color: blue; }
+      .échec { color: red; }
+      table { border-collapse: collapse; }
+      th { background-color: black; color: lightgrey; padding: 4px; }
+      td { padding: 4px; }
+      tr.moyennes { background-color: lightgray; }
+    </style>
+    <script>
+        let nomCours = {
+            math: "Math",
+            pp: "PP",
+            c: "Langage C",
+            oed: "OED",
+            ppoo: "PP orienté objet",
+            java: "Java",
+            mtd: "MTD"
+        };
+        
+        let cotes1 = [
+            {nom: "Bergamotte", groupe: "A",
+            cotes: {math: 12, pp: 17, c: 14} },
+            {nom: "Archibald", groupe: "C",
+            cotes: {pp: 9, c: 10} },
+            {nom: "Cunégonde", groupe: "D",
+            cotes: {math: 7, c: 11} },
+            {nom: "Diomède", groupe: "B",
+            cotes: {pp: 15} },
+            {nom: "Garibald", groupe: "A",
+            cotes: {pp: 3, math: 5} },
+            {nom: "Félix", groupe: "D",
+            cotes: {c: 10} },
+        ];
+        let cotes2 = [
+            {nom: "Hubertine", groupe: "A",
+            cotes: {mtd: 15, java: 12} },
+            {nom: "Isidore", groupe: "D",
+            cotes: {oed: 5, ppoo: 7, java: 6} },
+            {nom: "Jacynthe", groupe: "B",
+            cotes: {mtd: 12, ppoo: 3, oed: 11} },
+            {nom: "Kerrouko", groupe: "C",
+            cotes: {java: 5, ppoo: 7, mtd: 13} },
+            {nom: "Lucienne", groupe: "C",
+            cotes: {java: 18, oed: 16, mtd: 18} },
+            {nom: "Mathilde", groupe: "A",
+            cotes: {ppoo: 4, java: 9, mtd: 8} },
+        ];
+        
+        function calculeMoyenne(cotes){
+            let moyennesCours = {};
+            for (const etudiant of cotes){
+                for (const intitule in etudiant.cotes){
+                    if (!moyennesCours[intitule]){
+                        moyennesCours[intitule] = {somme: 0, nombre: 0};
+                    }
+                    moyennesCours[intitule].somme += etudiant.cotes[intitule];
+                    moyennesCours[intitule].nombre++;
+                }
+            }
+
+            return moyennesCours;
+        };
+
+
+        function extraireCours(cotes){
+            let cours = [];    
+            for (const etudiant of cotes){
+                for (const intitule in etudiant.cotes){
+                    if (!cours.includes(intitule)){
+                        cours.push(intitule);
+                    }
+                }
+            }
+            return cours;
+        }
+
+        function transformationNomCours(cours) {
+            let nomTransforme = [];
+            for (const intitule of cours) {
+                nomTransforme.push(nomCours[intitule] || intitule);
+            }
+            return nomTransforme;
+        }
+
+        function baseTableau(cours){
+            document.write("<table><thead><tr><th>Etudiant</th><th>Grp</th>");
+            for (const cour of cours){
+                document.write("<th>" + cour + "</th>");
+            }
+            document.write("</tr></thead><tbody>");    
+        }
+
+        function afficheMoyennes(moyennesCours){
+            document.write("<tr class='moyennes'><td>Moyennes</td><td></td>");
+            for (const intitule in moyennesCours){
+                document.write("<td>" + Math.round((moyennesCours[intitule].somme / moyennesCours[intitule].nombre)) + "</td>");
+            }
+            document.write("</tr>");
+        }
+
+        function afficheCotes(cotes){
+            let cours = extraireCours(cotes);
+            let moyennesCours = calculeMoyenne(cotes);;
+            let coursTransformes = transformationNomCours(cours);
+            baseTableau(coursTransformes);
+            for (const etudiant of cotes){
+                document.write("<tr><td>" + etudiant.nom + "</td><td>" + etudiant.groupe + "</td>");
+                for (const cour of cours){
+                    if (etudiant.cotes[cour]){
+                        document.write("<td>" + etudiant.cotes[cour] + "</td>");
+                    } else {
+                        document.write("<td></td>");
+                    }
+                }
+                document.write("</tr>");
+            }
+
+            afficheMoyennes(moyennesCours)
+   
+        }
+
+    
+
+    </script>
+  </head>
+  <body>
+    <script>
+        
+     afficheCotes(cotes1);
+      afficheCotes(cotes2);
+    </script>
+  </body>
+</html>
