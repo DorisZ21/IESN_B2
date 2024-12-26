@@ -1,0 +1,15 @@
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\bin\Debug\net9.0\labo2.exe
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\bin\Debug\net9.0\labo2.deps.json
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\bin\Debug\net9.0\labo2.runtimeconfig.json
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\bin\Debug\net9.0\labo2.dll
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\bin\Debug\net9.0\labo2.pdb
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.AssemblyInfoInputs.cache
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.AssemblyInfo.cs
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.csproj.CoreCompileInputs.cache
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.sourcelink.json
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.dll
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\refint\labo2.dll
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.pdb
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\labo2.genruntimeconfig.cache
+C:\Users\Doria\Desktop\IESN_B2\C#\labo2\obj\Debug\net9.0\ref\labo2.dll

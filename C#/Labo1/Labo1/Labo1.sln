@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labo1", "Labo1\Labo1.csproj", "{8D7191C2-F3DA-45C5-9E64-1203BBC945FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labo2", "..\..\labo2\labo2.csproj", "{A8035D5F-FAED-45D1-B034-F3D6B6B9BFB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D7191C2-F3DA-45C5-9E64-1203BBC945FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7191C2-F3DA-45C5-9E64-1203BBC945FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7191C2-F3DA-45C5-9E64-1203BBC945FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7191C2-F3DA-45C5-9E64-1203BBC945FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8035D5F-FAED-45D1-B034-F3D6B6B9BFB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8035D5F-FAED-45D1-B034-F3D6B6B9BFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8035D5F-FAED-45D1-B034-F3D6B6B9BFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8035D5F-FAED-45D1-B034-F3D6B6B9BFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
